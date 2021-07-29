@@ -59,6 +59,7 @@ midi = adafruit_midi.MIDI(midi_out=midi_service, out_channel=0)
 midi2 = adafruit_midi.MIDI(midi_out=usb_midi.ports[1], out_channel=0, in_channel=0,midi_in=usb_midi.ports[0])
 
 # Start the BLE things
+ble.name = "MIDIThing"
 ble.start_advertising(advertisement)
 
 tick = 0.01
